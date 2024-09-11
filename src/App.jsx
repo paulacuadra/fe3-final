@@ -6,11 +6,14 @@ import Favs from './Routes/Favs';
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import { Navigate } from 'react-router-dom';
+import { useState, useContext } from 'react';
+import { ContextGlobal } from './Components/utils/global.context';
 
 
 function App() {
+  const {state, dispatch} = useContext(ContextGlobal);
   return (
-    
+    <div className={state.theme === 'light' ? 'light' : 'dark'}>
     <Router>
     <Navbar />
     <Routes>
@@ -22,7 +25,7 @@ function App() {
     </Routes>
     <Footer />
   </Router>
-
+  </div>
   );
 }
 

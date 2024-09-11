@@ -19,7 +19,7 @@ const Navbar = () => {
       <Link to="/contact">Contact</Link>
       <Link to="/favs">Favorites</Link>
       {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
-      <button onClick={toggleTheme}>Change to {state.theme === 'light' ? 'Dark' : 'Light'} theme</button>
+      <button className="button-theme" onClick={toggleTheme}>{state.theme === 'light' ? 'Dark' : 'Light'} theme</button>
     </nav>
     
   )
