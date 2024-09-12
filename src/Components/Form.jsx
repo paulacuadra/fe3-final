@@ -48,7 +48,7 @@ const Form = () => {
   return (
     <div className="form-container">
       {isSubmitted ? (
-        <p>Gracias {formData.name}, te contactaremos cuando antes vía mail.</p>
+        <p>Gracias {formData.name}, te contactaremos cuanto antes vía mail.</p>
       ) : (
         <form onSubmit={handleSubmit} className="contact-form">
           <div className="form-group">

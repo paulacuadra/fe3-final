@@ -19,15 +19,14 @@ const Card = ({ dentist}) => {
   }
 
   return (
-    <div className="card">
-          <div key={dentist.id}>
+    <div className="card" key={dentist.id}>
           <h2>{dentist.name}</h2>
+          <img src="images/doctor.jpg" alt="doctor.jpg" className="foto-doctor"/>
           <p>{dentist.username}</p>
           <button onClick={addFav} className="favButton">
           {isFavorite ? 'Remove from Fav' : 'Add to Fav'}
         </button>
-        <Link to={`/dentist/${dentist.id}`}>Ver detalles</Link>
-        </div>          
+        <Link to={`/dentist/${dentist.id}`}>Ver detalles</Link>         
     </div>
   );
 };

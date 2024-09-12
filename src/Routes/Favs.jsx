@@ -8,7 +8,7 @@ const Favs = () => {
   const { state } = useContext(ContextGlobal);
 
   return (
-    <div className="grid">
+    <div className="fav-container">
       {state.favorites.length > 0 ? (
         state.favorites.map(dentist => (
           <Card key={dentist.id} dentist={dentist}/>
